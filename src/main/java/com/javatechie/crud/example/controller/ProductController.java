@@ -20,7 +20,7 @@ public class ProductController {
 	@Autowired
 	ProductService service;
 
-	@GetMapping("/products")
+	@GetMapping("/productsDetatils")
 	public List<Product> getAllProducts() {
 		return service.getAllProducts();
 	}
@@ -30,7 +30,7 @@ public class ProductController {
 		return service.getProductById(id);
 	}
 
-	@PostMapping("/products")
+	@PostMapping("/productsData")
 	public void addProduct(@RequestBody Product product) {
 		 service.AddProduct(product);
 
